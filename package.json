@@ -8,7 +8,7 @@
     "test": "node ./node_modules/@angular/cli/bin/ng test",
     "lint": "node ./node_modules/@angular/cli/bin/ng lint",
     "e2e": "node ./node_modules/@angular/cli/bin/ng e2e",
-    "build:single-spa": "node ./node_modules/@angular/cli/bin/ng build --prod --deploy-url http://localhost:4200/ --output-hashing none",
+    "build:single-spa": "node ./node_modules/@angular/cli/bin/ng build --prod --output-hashing none",
     "serve:single-spa": "node ./node_modules/@angular/cli/bin/ng serve --disable-host-check --port 4201 --deploy-url http://localhost:4201/ --live-reload false"
   },
   "private": true,
