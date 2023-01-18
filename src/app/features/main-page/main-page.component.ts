@@ -14,9 +14,10 @@ export class MainPageComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    fetch(assetUrl('config.json')).then((data:any) => {
-      console.log(data.json());
-      this.title = JSON.stringify(data.json());
+    fetch(assetUrl('config.json')).then(async (data:any) => {
+      const json = await data.json();
+      console.log(json);
+      this.title = JSON.stringify(json);
     });
 
   }
