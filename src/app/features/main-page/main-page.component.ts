@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { assetUrl } from 'src/single-spa/asset-url';
 
 @Component({
   selector: 'my-app-main-page',
@@ -7,12 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
-
+  title = ''
   constructor(
     private router: Router
   ) { }
 
   ngOnInit() {
+    fetch(assetUrl('config.json')).then((data:any) => {this.title = data.title});
+
   }
 
   toPage1(evt) {
