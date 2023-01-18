@@ -17,7 +17,7 @@ export class MainPageComponent implements OnInit {
     fetch(assetUrl('config.json')).then(async (data:any) => {
       const json = await data.json();
       console.log(json);
-      this.title = JSON.stringify(json);
+      this.title = json.title;
     });
 
   }
