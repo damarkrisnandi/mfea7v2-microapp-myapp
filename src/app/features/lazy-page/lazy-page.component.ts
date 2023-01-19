@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { assetUrl } from 'src/single-spa/asset-url';
 
 @Component({
   selector: 'my-app-lazy-page',
