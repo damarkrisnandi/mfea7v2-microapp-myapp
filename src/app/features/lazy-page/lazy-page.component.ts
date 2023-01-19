@@ -7,12 +7,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./lazy-page.component.css']
 })
 export class LazyPageComponent implements OnInit {
-
+  title = ''
   constructor(
     private router: Router
   ) { }
 
   ngOnInit() {
+    fetch(assetUrl('config.json')).then(async (data:any) => {
+      const json = await data.json();
+      console.log(json);
+      this.title = json.title;
+    });
   }
 
   toMain(event) {
